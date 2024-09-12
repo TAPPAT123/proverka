@@ -17,7 +17,7 @@ app.get('/api/users/:telegramId/balance', async (req, res) => {
     const telegramId = parseInt(req.params.telegramId, 10); 
 
     await client.connect();
-    const db = client.db('bd1');
+    const db = client.db('db1');
     const collection = db.collection('user1');
 
     const user = await collection.findOne({ telegramId });
